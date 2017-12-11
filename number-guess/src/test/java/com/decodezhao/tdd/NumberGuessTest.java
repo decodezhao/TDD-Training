@@ -54,4 +54,19 @@ public class NumberGuessTest {
         Assert.assertEquals("4A0B", guess);
     }
 
+    @Test
+    public void shouldReturn0A4BWhenInput_4321() {
+        Assert.assertEquals("0A4B", numberGuess.guess("4321"));
+    }
+
+    @Test
+    public void shouldReturn0A0BWhenInput_5678() {
+        Assert.assertEquals("0A0B", numberGuess.guess("5678"));
+    }
+
+    @Test
+    public void shouldReturn1A1BWhenInput_1356() {
+        Assert.assertEquals("1A1B", numberGuess.guess("1356"));
+    }
+
 }
