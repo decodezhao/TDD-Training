@@ -51,23 +51,25 @@ public class NumberGuessTest {
 
     @Test
     public void shouldReturn4A0BWhenInput_1234() {
-        // String guess = numberGuess.guess("1234");
-        // Assert.assertEquals("4A0B", guess);
+        UniqueNumber userInput = new UniqueNumber("1234");
+        String guess = numberGuess.guess(userInput);
+        Assert.assertEquals("4A0B", guess);
     }
 
     @Test
     public void shouldReturn0A4BWhenInput_4321() {
-        // Assert.assertEquals("0A4B", numberGuess.guess("4321"));
+        UniqueNumber userInput = new UniqueNumber("4321");
+        Assert.assertEquals("0A4B", numberGuess.guess(userInput));
     }
 
     @Test
     public void shouldReturn0A0BWhenInput_5678() {
-        // Assert.assertEquals("0A0B", numberGuess.guess("5678"));
+        Assert.assertEquals("0A0B", numberGuess.guess(new UniqueNumber("5678")));
     }
 
     @Test
     public void shouldReturn1A1BWhenInput_1356() {
-        // Assert.assertEquals("1A1B", numberGuess.guess("1356"));
+        Assert.assertEquals("1A1B", numberGuess.guess(new UniqueNumber("1356")));
     }
 
 }
