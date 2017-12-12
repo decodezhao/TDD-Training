@@ -35,8 +35,8 @@ public class NumberGuessTest {
 
     @Test
     public void shouldReturn4NoRepeatNumbers() {
-        String sysNumber = numberFactory.genNoRepeatNumber();
-        Assert.assertEquals("1234", sysNumber);
+        NumberFactory numberFactory = Mockito.spy(NumberFactory.class);
+        Assert.assertNotNull(numberFactory.genNoRepeatNumber());
     }
 
     @Test
