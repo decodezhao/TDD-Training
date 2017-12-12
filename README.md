@@ -1,4 +1,6 @@
 # TDD-Training
+[![Build Status](https://travis-ci.org/decodezhao/TDD-Training.svg?branch=master)](https://travis-ci.org/decodezhao/TDD-Training)
+
 TDD实践
 
 ## NumberGuess
