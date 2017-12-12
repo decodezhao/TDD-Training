@@ -14,7 +14,7 @@ import java.util.Random;
  */
 public class NumberFactory {
 
-    public String genNoRepeatNumber() {
+    public UniqueNumber genNoRepeatNumber() {
         StringBuilder sb = new StringBuilder();
         int[] a = new int[] {
             -1, -1, -1, -1
@@ -36,7 +36,7 @@ public class NumberFactory {
                 count++;
             }
         }
-        return sb.toString();
+        return new UniqueNumber(sb.toString());
     }
 
 }

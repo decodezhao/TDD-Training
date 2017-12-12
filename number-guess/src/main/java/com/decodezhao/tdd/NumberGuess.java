@@ -12,24 +12,28 @@ package com.decodezhao.tdd;
  */
 public class NumberGuess {
 
-    NumberFactory numberFactory = new NumberFactory();
+    private NumberFactory numberFactory = new NumberFactory();
 
-    public String guess(String userInput) {
-        if (userInput == null || userInput.length() != 4) {
+    public String guess(UniqueNumber userInput) {
+        if (userInput == null) {
             return "";
         }
-        String repeatNum = numberFactory.genNoRepeatNumber();
+        String number = userInput.getNumber();
+        if (number == null || number.length() != 4) {
+            return "";
+        }
+        UniqueNumber repeatNum = numberFactory.genNoRepeatNumber();
 
         // 判断数字相同且位置也相同
         int aCount = 0;
         int bCount = 0;
         for (int i = 0; i < 4; i++) {
-            char c = repeatNum.charAt(i);
-            if (c == userInput.charAt(i)) {
+            char c = repeatNum.getNumber().charAt(i);
+            if (c == number.charAt(i)) {
                 aCount++;
             }
             else {
-                if (userInput.contains(String.valueOf(c))) {
+                if (number.contains(String.valueOf(c))) {
                     bCount++;
                 }
             }
