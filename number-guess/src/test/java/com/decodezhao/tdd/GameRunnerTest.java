@@ -1,5 +1,6 @@
 package com.decodezhao.tdd;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,9 +24,10 @@ public class GameRunnerTest {
 
 
     @Test
-    public void shouldQuitWhenReadLineQ() {
-        when(scannerHandler.readLine()).thenReturn("q");
-        gameRunner.start();
+    public void shouldQuitWhenReadLineEmpty() {
+        when(scannerHandler.readLine()).thenReturn("");
+        String result = gameRunner.start();
+        Assert.assertEquals("quit", result);
     }
 
 }
