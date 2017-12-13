@@ -23,6 +23,7 @@ public class NumberGuess {
             return "";
         }
         UniqueNumber repeatNum = numberFactory.genNoRepeatNumber();
+        System.out.println("The system number is:" + repeatNum.getNumber());
 
         // 判断数字相同且位置也相同
         int aCount = 0;
