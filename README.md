@@ -1,5 +1,6 @@
 # TDD-Training
 [![Build Status](https://travis-ci.org/decodezhao/TDD-Training.svg?branch=master)](https://travis-ci.org/decodezhao/TDD-Training)
+[![Coverage Status](https://coveralls.io/repos/github/decodezhao/TDD-Training/badge.svg?branch=master)](https://coveralls.io/github/decodezhao/TDD-Training?branch=master)
 
 TDD实践
 
