@@ -7,19 +7,21 @@ public class GameRunner {
 
     private ScannerHandler scannerHandler;
 
-    public GameRunner(ScannerHandler scannerHandler) {
+    private NumberGuess numberGuess;
+
+    public GameRunner(ScannerHandler scannerHandler, NumberGuess numberGuess) {
         this.scannerHandler = scannerHandler;
+        this.numberGuess = numberGuess;
     }
 
     public static void main(String[] args) {
-        GameRunner gameRunner = new GameRunner(new ScannerHandler(new Scanner(System.in)));
+        GameRunner gameRunner = new GameRunner(new ScannerHandler(new Scanner(System.in)), new NumberGuess());
         String result = gameRunner.start();
         System.out.println("The result is " + result);
     }
 
     public String start() {
         System.out.println("Number Guess Game Start...");
-        NumberGuess numberGuess = new NumberGuess();
 
         System.out.print("Please input a 4-bit number(like '1234'):");
         String number = scannerHandler.readLine();
